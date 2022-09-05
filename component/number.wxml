@@ -1,0 +1,6 @@
+<!--component/number.wxml-->
+<view class="number-input weui-flex">
+  <view class="btn down" bind:tap="down"><text>|</text></view>
+  <input type="number weui-flex__item" value="{{number}}" bind:input="onInput" bind:blur="onBlur"></input>
+  <view class="btn up" bind:tap="up">+</view>
+</view>

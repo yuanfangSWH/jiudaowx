@@ -1,0 +1,55 @@
+/* component/number.wxss */
+
+.number-input {
+  width: 100px;
+  background-color: #F5F5F5;
+  font-size: 0;
+}
+
+.number-input .btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  background-color: #A1A09E;
+  text-align: center;
+}
+
+.number-input .down {
+  border-radius: 3px 0 0 3px;
+}
+
+.number-input .down text {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  transform: rotate(90deg);
+}
+
+.number-input .up {
+  font-weight: 300;
+  font-size: 25px;
+  border-radius: 0 3px 3px 0;
+}
+
+.number-input input {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  font-size: 16px;
+  color: #D3222E;
+  text-align: center;
+}
+
+.weui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex
+}
+
+.weui-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1
+}
