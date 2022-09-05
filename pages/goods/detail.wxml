@@ -1,0 +1,44 @@
+<!-- pages/goods/detail.wxml -->
+<view class="page">
+  <view class="bd">
+    <view class="goods weui-flex">
+      <image mode="aspectFit" src="{{goodsDetail.image || '/images/demo.jpg'}}" class="pic"></image>
+      <view class="info weui-flex__item">
+        <view class="name">{{goodsDetail.name}}</view>
+        <view class="introduction">{{goodsDetail.introduction}}</view>
+        <view class="price">
+          <text class="red text-red">￥{{goodsDetail.price}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="tags">
+      <text class="tag">特惠促销</text>
+      <text class="tag">满100免配送费</text>
+    </view>
+    <view class="money weui-flex">
+      <view class="weui-flex__item">
+        <view class="big">
+          总金额：
+          <text class="text-red">￥{{totalMoney}}</text>
+        </view>
+        <view class="small">
+          配送费：
+          <text class="text-red">￥{{express}}</text>
+        </view>
+      </view>
+      <view>
+        <number number="{{number}}" bind:change="onChange"></number>
+      </view>
+    </view>
+  </view>
+  <view class="footer weui-flex">
+    <view class="weui-flex__item yellow" bind:tap="addToCart">
+      <image src="/images/shopcart.png" mode="aspectFit"></image>
+      <view class="text">加入购物车</view>
+    </view>
+    <view class="weui-flex__item red" bind:tap="takeOrder">
+      <image src="/images/pay.png" mode="aspectFit"></image>
+      <view class="text">立即下单</view>
+    </view>
+  </view>
+</view>

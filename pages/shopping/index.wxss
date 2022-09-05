@@ -1,0 +1,99 @@
+/* pages/shopping/index.wxss */
+.goods-list {
+  padding: 10px 5px 10px 0;
+}
+
+.goods-list .goods {
+  margin-top: 14px;
+}
+
+.goods .image {
+  margin-right: 10px;
+  max-height: 120px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.goods .image image {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+
+.goods .weui-cell {
+  padding: 0;
+}
+
+.goods .shadow {
+  width: 100%;
+  box-shadow: 1px 1px 1px 2px #eee;
+  padding: 4px 0px 4px 4px;
+}
+
+.goods .content {
+  position: relative;
+}
+
+.goods .content .title {
+  color: #1c2438;
+}
+
+.goods .content .intro {
+  font-size: 12px;
+  color: #495060;
+}
+
+.goods .content .footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 2px;
+}
+
+.goods .content .price {
+  color: #ff461f;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.ft {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #eee;
+}
+
+.ft .weui-flex {
+  align-items: center;
+}
+
+.ft .text {
+  padding-left: 15px;
+  height: 40px;
+  border-top: 1px solid #dddee1;
+  box-sizing: border-box;
+}
+
+.ft .text>text {
+  line-height: 40px;
+  color: #495060;
+}
+
+.ft .text .money {
+  color: #5cadff;
+  font-weight: bold;
+}
+
+.empty image {
+  margin-top: 100px;
+  width: 64px;
+  max-height: 64px;
+}
+
+.empty .tip {
+  font-size: 14px;
+  color: #999;
+}

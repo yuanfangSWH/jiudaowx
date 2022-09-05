@@ -1,0 +1,26 @@
+/* pages/address/edit.wxss */
+.tips {
+  color: #999;
+  margin-left: 15px;
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.page>.footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.weui-label, .weui-select_in-select-after {
+  font-size: 14px;
+}
+
+.weui-input, .weui-textarea {
+  font-size: 14px;
+}

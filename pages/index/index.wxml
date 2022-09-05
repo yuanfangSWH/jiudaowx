@@ -1,0 +1,61 @@
+<!-- index.wxml -->
+<view class="page">
+  <view class="hd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="onSearch" confirm-type="search"/>
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </view>
+  <view class="bd">
+    <view class="activity">
+      <swiper indicator-dots="{{true}}" indicator-active-color="#ffffff" autoplay="{{true}}">
+        <swiper-item>
+          <image src="/images/activity.jpg" class="slide-image" mode="scaleToFill"/>
+        </swiper-item>
+        <swiper-item>
+          <image src="/images/activity.jpg" class="slide-image" mode="scaleToFill"/>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view class="category weui-flex">
+      <view class="weui-flex__item">
+        <image src="/images/baijiu.png" class="baijiu" data-id="2" bind:tap="goList"></image>
+        <image src="/images/hongjiu.png" class="hongjiu" data-id="3" bind:tap="goList"></image>
+        <image src="/images/yangjiu.png" class="yangjiu" data-id="4" bind:tap="goList"></image>
+      </view>
+      <image class="pijiu" src="/images/pijiu.png" data-id="1" bind:tap="goList"></image>
+    </view>
+    <view class="goods-list">
+      <view class="title">
+        <image src="/images/hot_red.png" mode="widthFix"></image>
+        <text class="big">热销商品</text>
+        <text class="small">Hot selling goods</text>
+      </view>
+      <view class="goods weui-flex" wx:for="{{hotList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bind:tap="goDetail">
+        <image mode="aspectFit" class="pic" src="{{item.image || '/images/demo.jpg'}}"></image>
+        <view class="info weui-flex__item">
+          <view class="name">{{item.name}}</view>
+          <view class="introduction">{{item.introduction}}</view>
+          <view class="footer">
+            <text class="price text-red">￥{{item.price}}</text>
+            <text class="sold">已售: {{item.sold}}件</text>
+          </view>
+          <view class="buy">购买</view>
+        </view>
+      </view>
+      <view class="no-more">没有更多了</view>
+    </view>
+  </view>
+</view>

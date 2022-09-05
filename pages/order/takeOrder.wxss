@@ -1,0 +1,94 @@
+/* pages/order/takeOrder.wxss */
+
+.hd {
+  margin: 5px 10px 10px 10px;
+  border-radius: 2px;
+}
+
+.address .user {
+  font-size: 15px;
+}
+
+.address .user .phone {
+  margin-left: 10px;
+}
+
+.address .addr i-tag {
+  margin-right: 6px;
+}
+
+.address .addr .location {
+  font-size: 13px;
+  color: #666;
+}
+
+.goods {
+  padding-left: 10px;
+  margin: 0 10px 10px 10px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.goods .item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.goods .item:last-child {
+  border-bottom: none;
+}
+
+.goods .item .pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.goods .item image {
+  display: block;
+  height: 60px;
+  width: 60px;
+}
+
+.goods .item .detail {
+  max-width: 100%;
+  padding-left: 5px;
+}
+
+.goods .item .name {
+  max-width: calc(100% - 60px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.goods .item .number {
+  font-size: 12px;
+}
+
+.goods .item .number .price {
+  margin-left: 20px;
+}
+
+.goods .item .money {
+  font-size: 13px;
+}
+
+.bd .remark {
+  position: relative;
+  margin: 0 10px;
+  padding: 5px;
+  background-color: white;
+  z-index: 1;
+}
+
+.bd .remark .weui-cell {
+  background-color: #f8f8f8;
+}
+
+i-modal {
+  position: relative;
+  z-index: 1000;
+}

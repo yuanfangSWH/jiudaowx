@@ -1,0 +1,52 @@
+/* pages/address/index.wxss */
+page {
+  background-color: #eee;
+  padding-bottom: 60px;
+}
+
+.address {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  background-color: white;
+}
+
+.address .content {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.address .content .phone {
+  margin-left: 10px;
+}
+
+.address .content .addr {
+  font-size: 13px;
+  color: #666;
+}
+
+.address .content .addr i-tag {
+  margin-right: 5px;
+}
+
+.address .content .addr text {
+  vertical-align: middle;
+}
+
+.address .footer {
+  padding: 8px 10px 8px 0;
+}
+
+.address .footer .btn {
+  display: inline-block;
+}
+
+.page>.footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  z-index: 100;
+}

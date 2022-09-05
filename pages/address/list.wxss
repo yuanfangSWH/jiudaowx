@@ -1,0 +1,36 @@
+/* pages/address/list.wxss */
+.address .user {
+  font-size: 15px;
+}
+
+.address .user .phone {
+  margin-left: 10px;
+}
+
+.address .addr i-tag {
+  margin-right: 6px;
+}
+
+.address .addr .location {
+  font-size: 13px;
+  color: #666;
+}
+
+.address .edit {
+  padding: 5px 8px;
+}
+
+.address .weui-cell {
+  padding-right: 0;
+}
+
+.page>.footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  z-index: 100;
+}

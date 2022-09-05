@@ -1,0 +1,98 @@
+/* pages/goods/list.wxss */
+
+page {
+  background-color: white;
+}
+
+.brands {
+  padding: 0 10px 10px 10px;
+  font-size: 14px;
+  background-color: #EFEFF4;
+}
+
+.brands .brand {
+  margin-right: 25px;
+}
+
+.bd {
+  padding: 0 10px;
+}
+
+.bd .filter {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.bd .filter .item {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.bd .filter .item.active {
+  background-color: #ddd;
+}
+
+.goods-list {
+  margin-top: 10px;
+}
+
+.goods {
+  position: relative;
+  margin-top: 5px;
+  border: 1px solid #f6f6f6;
+  border-radius: 2px;
+  background-color: #F6F6F6;
+}
+
+.goods .pic {
+  width: 100px;
+  height: 100px;
+}
+
+.goods .buy {
+  position: absolute;
+  right: 15px;
+  bottom: 8px;
+  width: 42px;
+  height: 42px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 42px;
+  background-size: 100% 100%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAS1BMVEUAAAD/lRD/lRD/lRD5tyn4vi7/lRD/lRD/lRD4wC//lRD4vy/4vi76syX7rCD8qR74vy/+nhb5vCz5vCz5uCn6tSf9nxf6tSf4wC/w414uAAAAGHRSTlMAMygVjdgvIx71CvDecVdR8T27uo99P3wi37tSAAABJ0lEQVRIx5VW0RKDIAxTCgripm7O9f+/dFK5Q8VZmkeNubaExipDB61q6rpRLXQVA7ArM6GxcEdWdQYFDLnsAxvfPvXLjM6N5qWf8ZHN2S29mHSPO/R6osfteRxbIdrjCV5vBR2HROzB4AXMQPyskofDS7hHqid1+cW/+Bz6BdLGG5A+7Aof3B3dDVR+Ejd4CxPlo7hGBprko/jkObqforzlxUk+Dic4tufpffDzevzBVViA4LeuglQLXw3Q+b9L6G9ygkpD50evqFNfQvfUa73CldBdYArpwmKErQoHKTwmoQmkFiMDzzx9JgOXXo+Rrofs8gmvtmxxyNdSWnofbunJVqp4YedxMGbzTnFwETbLfAybednChokyRCbKuKCUx7A85IW/ED/dzGzu99rKbAAAAABJRU5ErkJggg==");
+}
+
+.goods .info {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.goods .info .name {
+  font-size: 15px;
+}
+
+.goods .info .introduction {
+  font-size: 12px;
+  color: #999;
+}
+
+.goods .info .footer {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}
+
+.goods .info .price {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.goods .info .sold {
+  font-size: 12px;
+  color: #FDA43B;
+}

@@ -1,0 +1,64 @@
+<!-- pages/order/takeOrder.wxml -->
+<view class="page">
+  <view class="hd">
+    <view class="address no-border weui-cells weui-cells_after-title">
+      <navigator url="/pages/address/list" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd" wx:if="{{hasAddress}}">
+          <view class="user">
+            <text class="name">{{address.name}}</text>
+            <text class="phone">{{address.phone}}</text>
+          </view>
+          <view class="addr">
+            <i-tag name="家里" color="blue" wx:if="{{address.remark}}">{{address.remark}}</i-tag>
+            <text class="location">{{address.province + address.city + address.area + address.stress}}</text>
+          </view>
+        </view>
+        <view class="weui-cell__bd" wx:else style="color: #666;">
+          请选择地址
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+  </view>
+  <view class="bd">
+    <view class="goods">
+      <view class="item weui-flex" wx:for="{{goodsList}}" wx:key="{{item.id}}">
+        <view class="pic">
+          <image mode="aspectFit" src="{{item.image || '/images/demo.jpg'}}"></image>
+        </view>
+        <view class="detail weui-flex__item">
+          <view class="name">
+            {{item.name}}
+          </view>
+          <view class="number">
+            <text class="quantity">数量：{{item.number}}</text>
+            <text class="price">单价：￥{{item.price}}</text>
+          </view>
+          <view class="money text-bold">￥{{item.totalMoney}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="remark" hidden="{{visible}}">
+      <view class="weui-cells__title">备注</view>
+      <view class="weui-cells no-border weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="给商家留言" bindinput="inputRemark" bindblur="inputRemark" style="font-size: 14px;height: 3.3em;z-index: 0;" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="ft-btn">
+    <view class="weui-flex">
+      <view class="text weui-flex__item" style="flex: 3;">
+        <text class="zongji">合计：</text>
+        <text class="money">￥{{totalMoney}}</text>
+      </view>
+      <view class="btn weui-flex__item" bind:tap="takeOrder">提交订单</view>
+    </view>
+  </view>
+  <i-modal title="支付" visible="{{visible}}" actions="{{actions}}" bind:click="handleClick">
+    <view>请选择支付方式</view>
+  </i-modal>
+</view>

@@ -1,0 +1,83 @@
+/* pages/order/detail.wxss */
+
+page {
+  background-color: #eee;  
+}
+
+.address {
+  background-color: white;
+  padding: 10px;
+  margin-top: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.address .content {
+  padding-left: 5px;
+}
+
+.address .addr text {
+  font-size: 13px;
+}
+
+.goods {
+  padding-left: 10px;
+  background-color: white;
+}
+
+.goods .item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.goods .item:last-child {
+  border-bottom: none;
+}
+
+.goods .item image {
+  display: block;
+  flex: 0 0 auto;
+  width: 60px;
+  border-radius: 2px;
+}
+
+.goods .item .detail {
+  padding-left: 5px;
+  max-width: 100%;
+}
+
+.goods .item .name {
+  max-width: calc(100% - 60px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.goods .item .number {
+  font-size: 12px;
+}
+
+.goods .item .number .price {
+  margin-left: 10px;
+}
+
+.goods .item .money {
+  font-size: 13px;
+}
+
+.bd .info {
+  margin-top: 10px;
+  background-color: white;
+}
+
+.bd .info .item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.bd .info .item:last-child {
+  border-bottom: none;
+}
+
+.bd .info .label {
+  font-size: 13px;
+}

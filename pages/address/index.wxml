@@ -1,0 +1,42 @@
+<!-- pages/address/index.wxml -->
+<view class="page">
+  <view class="bd">
+    <radio-group bindchange="radioChange">
+      <view class="address" wx:for="{{addressList}}" wx:for-index="index" wx:key="{{item.id}}">
+        <view class="content">
+          <view class="user">
+            <text class="name">{{item.name}}</text>
+            <text class="phone">{{item.phone}}</text>
+          </view>
+          <view class="addr">
+            <i-tag wx:if="{{item.remark}}" name="{{item.remark}}">{{item.remark}}</i-tag>
+            <text>{{item.province + item.city + item.area + item.stress}}</text>
+          </view>
+        </view>
+        <view class="footer weui-flex">
+          <label class="radio weui-flex__item">
+            <radio class="weui-check" value="{{index}}" checked="{{item.select}}" />
+            <view class="weui-cell__hd weui-check__hd_in-checkbox">
+              <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.select}}"></icon>
+              <icon class="weui-icon-checkbox_success" type="success" color="#FF9511" size="23" wx:if="{{item.select}}"></icon>
+              设为默认地址
+            </view>
+          </label>
+          <view class="btns weui-flex__item text-right">
+            <view class="btn" data-id="{{item.id}}" bind:tap="editAddress">
+              <i-icon type="brush" size="20" />
+              编辑
+            </view>
+            <view class="btn" data-index="{{index}}" bind:tap="deleteAddress" style="margin-left: 15px;">
+              <i-icon type="trash" size="20" />
+              删除
+            </view>
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <view class="footer">
+    <i-button type="warning" shape="circle" size="small" bind:tap="newAddress">新建收货地址</i-button>
+  </view>
+</view>

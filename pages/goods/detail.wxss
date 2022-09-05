@@ -1,0 +1,100 @@
+/* pages/goods/detail.wxss */
+
+page, .page {
+  background-color: white;
+}
+
+.bd {
+  padding: 10px;
+}
+
+.goods .pic {
+  width: 100px;
+  height: 100px;
+}
+
+.goods .info {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.goods .info .name {
+  font-size: 15px;
+}
+
+.goods .info .introduction {
+  font-size: 12px;
+  color: #999;
+}
+
+.goods .info .price {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}
+
+.goods .price .red {
+  font-size: 18px;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.tags .tag {
+  color: white;
+  padding: 2px 4px;
+  font-size: 14px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background-color: #F8C030;
+}
+
+.money {
+  margin-top: 20px;
+}
+
+.money .big {
+  font-size: 18px;
+}
+
+.money .big .text-red {
+  font-weight: 600;
+}
+
+.money .small {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.footer .weui-flex__item {
+  padding: 5px 0;
+}
+
+.footer image {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 30px;
+}
+
+.footer .text {
+  color: white;
+  text-align: center;
+}
+
+.footer .yellow {
+  background-color: #F8C02F;
+}
+
+.footer .red {
+  background-color: #D10B1A;
+}

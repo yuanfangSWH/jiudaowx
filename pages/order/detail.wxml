@@ -1,0 +1,46 @@
+<!--pages/order/detail.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="address weui-flex">
+      <i-icon type="coordinates" size="22" />
+      <view class="content weui-flex__item">
+        <view class="user">
+          <text space="nbsp">{{orderDetail.address.name}}  {{orderDetail.address.phone}}</text>
+        </view>
+        <view class="addr">
+          <text>地址：{{orderDetail.address.province + orderDetail.address.city + orderDetail.address.area + orderDetail.address.stress}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="goods">
+      <view class="item weui-flex" wx:for="{{orderDetail.detail}}" wx:key="$index" data-id="{{item.id}}" bind:tap="goGoods">
+        <image mode="widthFix" src="{{item.image || '/images/demo.jpg'}}"></image>
+        <view class="detail weui-flex__item">
+          <view class="name">{{item.name}}</view>
+          <view class="number">
+            <text class="quantity">数量：{{item.number}}</text>
+            <text class="price">单价：￥{{item.price}}</text>
+          </view>
+          <view class="money text-bold">￥{{item.totalMoney}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bd">
+    <view class="info">
+      <view class="item">
+        <view class="label">订单编号：{{orderDetail.order_number}}</view>
+        <view class="label">下单时间：{{orderDetail.create_time}}</view>
+      </view>
+      <view class="item">
+        <view class="label">支付方式：在线支付</view>
+        <view class="label">支付时间：{{orderDetail.pay_time}}</view>
+      </view>
+      <view class="item">
+        <view class="label">商品总额：￥{{orderDetail.total_money}}</view>
+        <view class="label">运费：￥{{orderDetail.express}}</view>
+        <view class="label">实付款：￥{{orderDetail.reayPay}}</view>
+      </view>
+    </view>
+  </view>
+</view>

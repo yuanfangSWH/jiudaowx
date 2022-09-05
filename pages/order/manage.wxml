@@ -1,0 +1,69 @@
+<!--pages/order/manage.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="tabs weui-flex" bind:tap="onNav">
+      <view class="weui-flex__item text-center {{swiperIndex==0?'active':''}}" data-index="0">
+        全部
+      </view>
+      <view class="weui-flex__item text-center {{swiperIndex==1?'active':''}}" data-index="1">
+        待付款
+      </view>
+      <view class="weui-flex__item text-center {{swiperIndex==2?'active':''}}" data-index="2">
+        待配送
+      </view>
+      <view class="weui-flex__item text-center {{swiperIndex==3?'active':''}}" data-index="3">
+        待收货
+      </view>
+      <view class="weui-flex__item text-center {{swiperIndex==4?'active':''}}" data-index="4">
+        已完成 
+      </view>
+    </view>
+  </view>
+  <view class="bd">
+    <swiper indicator-dots="{{false}}" style="height: {{height}}px" current="{{swiperIndex}}" bind:change="onChange">
+      <block wx:for="{{orders}}" wx:for-item="ordersData" wx:key="$index">
+        <swiper-item>
+          <view class="orders getThisHeight">
+            <view class="order" wx:for="{{ordersData}}" wx:for-index="index" wx:key="{{item.id}}">
+              <view class="head weui-flex">
+                <view class="order-time">
+                  <text class="text-666" wx:if="{{item.status == 0}}">已取消</text>
+                  <text class="text-666" wx:if="{{item.status == 1 && !item.pay_type}}">等待支付</text>
+                  <text class="text-jiudao" wx:if="{{item.status == 1 && item.pay_type == 1}}">等待配送: 货到付款</text>
+                  <text class="text-666" wx:if="{{item.status == 1 && item.pay_type == 2}}">等待支付: 微信支付</text>
+                  <text class="text-jiudao" wx:if="{{item.status == 2}}">等待配送: 微信支付</text>
+                  <text class="text-jiudao" wx:if="{{item.status == 3}}">配送中: 等待收货</text>
+                  <text class="text-jiudao" wx:if="{{item.status == 4}}">服务完成</text>
+                </view>
+              </view>
+              <view data-id="{{item.id}}" bind:tap="goDetail">
+                <view class="content weui-flex" wx:for="{{item.detail}}" wx:for-item="goods" wx:key="$index">
+                  <image mode="aspectFit" src="{{goods.image || '/images/demo.jpg'}}"></image>
+                  <view class="name weui-flex__item">
+                    <text>{{goods.name}}</text>
+                    <text class="text-999">x{{goods.number}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class="info text-right">
+                <text space="nbsp">共1件商品  实付款:<text class="money">￥{{item.total_money}}</text>
+                </text>
+              </view>
+              <view class="btns text-right">
+                <button class="normal" wx:if="{{item.status == 1 || item.status == 2}}" data-index="{{index}}" bind:tap="cancelOrder">
+                  取消订单
+                </button>
+                <button class="primary" wx:if="{{item.status == 1 && item.pay_type != 1}}" data-index="{{index}}" bind:tap="pay">
+                  继续支付
+                </button>
+                <!-- <button class="normal" wx:if="{{item.status == 4}}">评价</button> -->
+                <!-- <button class="primary" wx:if="{{item.status == 4}}">再次购买</button> -->
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="no-more" wx:if="{{noMore}}">没有更多了</view>
+  </view>
+</view>

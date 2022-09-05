@@ -1,0 +1,48 @@
+<!--pages/shopping/index.wxml-->
+<view class="page">
+  <view class="hd"></view>
+  <view class="bd">
+    <view class="goods-list">
+      <checkbox-group bindchange="checkboxChange">
+        <view class="goods weui-flex" wx:for="{{goodsList}}" wx:key="{{item.id}}" wx:for-index="index" data-index="{{index}}" bind:longpress="deleteGoods">
+          <label class="weui-cell weui-check__label">
+            <checkbox class="weui-check" value="{{item.id}}" checked="{{item.select}}"/>
+            <view class="weui-cell__hd weui-check__hd_in-checkbox">
+              <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.select}}"></icon>
+              <icon class="weui-icon-checkbox_success" type="success" color="#FF9511" size="23" wx:else></icon>
+            </view>
+          </label>
+          <view class="shadow weui-flex">
+            <view class="image">
+              <image src="{{item.image || '/images/demo.jpg'}}" mode="aspectFit"></image>
+            </view>
+            <view class="content weui-flex__item">
+              <view class="title">{{item.name}}</view>
+              <view class="intro">{{item.introduction}}</view>
+              <view class="footer weui-flex">
+                <text class="price weui-flex__item">￥{{item.price}}</text>
+                <view class="text-center" style="padding-right: 10px;">
+                  <number number="{{item.number}}" bind:change="onChange" data-index="{{index}}"></number>
+                  <!-- <i-input-number value="{{0}}" min="0" max="1000" bindchange="handleChange" /> -->
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </checkbox-group>
+      <view class="empty text-center" wx:if="{{goodsList.length == 0}}">
+        <image src="/images/empty.png" mode="widthFix"></image>
+        <view class="tip">购物车空空如也，,快去添加吧~</view>
+      </view>
+    </view>
+  </view>
+  <view class="ft-btn" wx:if="{{goodsList.length > 0}}">
+    <view class="weui-flex">
+      <view class="text weui-flex__item" style="flex: 3;">
+        <text class="zongji">合计：</text>
+        <text class="money">￥{{totalMoney}}</text>
+      </view>
+      <view class="btn weui-flex__item" bind:tap="takeOrder">下单</view>
+    </view>
+  </view>
+</view>

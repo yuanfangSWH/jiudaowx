@@ -1,0 +1,119 @@
+/* pages/order/index.wxss */
+
+page {
+  background-color: #eee;
+}
+
+.hd {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.hd .tabs {
+  background-color: white;
+}
+
+.hd .tabs .weui-flex__item {
+  color: #666;
+  border-bottom: 2px solid transparent;
+}
+
+.hd .tabs .weui-flex__item.active {
+  color: #ff461f;
+  border-bottom-color: #ff461f;
+}
+
+.bd {
+  margin-top: 32px;
+}
+
+.order {
+  margin-bottom: 8px;
+}
+
+.order .head {
+  background-color: white;
+}
+
+.order .head .order-time {
+  font-size: 15px;
+}
+
+.order .head .del {
+  display: inline-block;
+  width: 40px;
+}
+
+.order .content {
+  background-color: #f8f8f8;
+  align-items: center;
+}
+
+.order .content image {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 2px;
+}
+
+.order .content .name {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.order .content .name .text-999 {
+  margin-left: 5px;
+}
+
+.order .info>text {
+  font-size: 14px;
+}
+
+.order .info .money {
+  font-size: 16px;
+}
+
+.order .btns {
+  font-size: 0;
+  padding: 8px 10px;
+  border-top: 1px solid #eee;
+}
+
+.order .btns button {
+  display: inline-block;
+  font-size: 14px;
+  min-width: 5em;
+  padding: 4px 8px;
+  line-height: 1em;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.order .btns button::after {
+  border: none;
+  outline: none;
+}
+
+.order .btns button+button {
+  margin-left: 14px;
+}
+
+.order .btns .primary {
+  border-color: #ff461f;
+  color: #ff461f;
+}
+
+.order .info,
+.order .btns {
+  background-color: white;
+}
+
+.order .head,
+.order .content,
+.order .info {
+  padding: 5px 10px;
+}

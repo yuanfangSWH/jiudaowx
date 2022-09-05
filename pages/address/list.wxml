@@ -1,0 +1,25 @@
+<!--pages/address/list.wxml-->
+<view class="page">
+  <view class="bd">
+    <view class="address weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{addressList}}" wx:for-index="index" wx:key="{{item.id}}" data-index="{{index}}" bind:tap="select">
+        <view class="weui-cell__bd">
+          <view class="user">
+            <text class="name">{{item.name}}</text>
+            <text class="phone">{{item.phone}}</text>
+          </view>
+          <view class="addr">
+            <i-tag wx:if="{{item.remark}}" name="{{item.remark}}">{{item.remark}}</i-tag>
+            <text class="location">{{item.province + item.city + item.area + item.stress}}</text>
+          </view>
+        </view>
+        <view class="edit" data-id="{{item.id}}" catch:tap="goEdit">
+          <i-icon type="brush" size="20" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <i-button type="warning" shape="circle" size="small" bind:tap="newAddress">新建收货地址</i-button>
+  </view>
+</view>

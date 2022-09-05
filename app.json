@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/index",
+    "pages/shopping/index",
+    "pages/order/index",
+    "pages/order/detail",
+    "pages/address/index",
+    "pages/order/takeOrder",
+    "pages/address/list",
+    "pages/address/edit",
+    "pages/goods/list",
+    "pages/goods/detail",
+    "pages/order/manage"
+  ],
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#FF9511",
+    "borderStyle": "black",
+    "color": "#7A7E83",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home2_off.png",
+        "selectedIconPath": "images/home2_on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/shopping/index",
+        "iconPath": "images/trolley2_off.png",
+        "selectedIconPath": "images/trolley2_on.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/my2_off.png",
+        "selectedIconPath": "images/my2_on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "酒道啦",
+    "navigationBarTextStyle": "black"
+  }
+}

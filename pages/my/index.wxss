@@ -1,0 +1,40 @@
+/* pages/my/index.wxss */
+
+.hd {
+  padding: 15px 20px;
+  background-color: #FF9511;
+  align-items: center;
+}
+
+.hd .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.hd .info {
+  padding-left: 15px;
+}
+
+.hd .info text {
+  color: white;
+}
+
+.hd .info button {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  color: white;
+}
+
+.hd .info button::after {
+  border: none;
+  outline: none;
+}
+
+.admin {
+  margin-top: 50px;
+}

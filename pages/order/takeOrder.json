@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-tag": "../../dist/tag/index",
+    "i-button": "../../dist/button/index",
+    "i-modal": "../../dist/modal/index"
+  }
+}

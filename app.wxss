@@ -1,0 +1,134 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+
+page{
+  background-color: #F8F8F8;
+  font-size: 16px;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-wx {
+  color: #09BB07 !important;
+}
+
+.text-red {
+  color: #FE1E20 !important;
+}
+
+.text-333 {
+  color: #333 !important;
+}
+
+.text-666 {
+  color: #666 !important;
+}
+
+.text-999 {
+  color: #999 !important;
+}
+
+.text-jiudao {
+  color: #FF9511 !important;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.no-more {
+  color: #999;
+  text-align: center;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.divider {
+  position: relative;
+}
+
+.divider::before, .divider::after {
+  content: " ";
+  position: absolute;
+  top: 13px;
+  width: 50px;
+  height: 1px;
+  background-color: #e9eaec;
+  z-index: -1;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.no-border, .no-border::after, .no-border::before {
+  border: none !important;
+}
+
+
+.ft-btn {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #eee;
+}
+
+.ft-btn .weui-flex {
+  align-items: center;
+}
+
+.ft-btn .text {
+  padding-left: 15px;
+  height: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid #dddee1;
+}
+
+.ft-btn .text>text {
+  line-height: 40px;
+  color: #495060;
+}
+
+.ft-btn .text .money {
+  color: #ff461f;
+  font-weight: bold;
+}
+
+.ft-btn .btn {
+  color: white;
+  text-align: center;
+  background-color: #D10B1A;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}

@@ -1,0 +1,57 @@
+<!-- pages/address/edit.wxml -->
+<view class="page">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">收货人</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{addressData.name}}" data-key="name" placeholder="收货人姓名" bindinput="onInput" bindblur="onInput" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view class="weui-label">手机号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{addressData.phone}}" data-key="phone" placeholder="请输入手机号" bindinput="onInput" bindblur="onInput" />
+      </view>
+      <!-- <view class="weui-cell__ft">
+        <view class="weui-vcode-btn">获取验证码</view>
+      </view> -->
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">所在地区</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="region" disabled="{{true}}">
+          <view class="weui-select weui-select_in-select-after" style="border-right: none;color: #999;">
+            {{addressData.province + addressData.city + addressData.area}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell">
+      <view class="weui-cell__hd">
+        <view class="weui-label">详细地址</view>
+      </view>
+      <view class="weui-cell__bd">
+        <textarea class="weui-textarea" value="{{addressData.stress}}" data-key="stress" placeholder="详细地址" bindinput="onInput" bindblur="onInput" style="height: 3.3em" />
+        <!-- <view class="weui-textarea-counter">0/200</view> -->
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">标签</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{addressData.remark}}" data-key="remark" placeholder="地址标签" bindinput="onInput" bindblur="onInput" />
+      </view>
+    </view>
+  </view>
+  <view class="tips">暂时只支持配送钦州市区</view>
+  <view class="footer">
+    <i-button type="warning" shape="circle" size="small" bind:tap="save">保存</i-button>
+  </view>
+</view>

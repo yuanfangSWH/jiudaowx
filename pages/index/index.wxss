@@ -1,0 +1,155 @@
+/**index.wxss**/
+
+.weui-search-bar {
+  background-color: transparent;
+  border-top: none;
+  border-bottom: none;
+}
+
+.bd {
+  padding: 0 10px;
+}
+
+swiper {
+  height: 130px;
+}
+
+.activity .slide-image {
+  width: 100%;
+  height: 130px;
+}
+
+.category {
+  margin-top: 4px;
+}
+
+.category .weui-flex__item image {
+  position: relative;
+  display: block;
+  width: 440rpx;
+  height: 70px;
+  margin-bottom: 4px;
+}
+
+.category .weui-flex__item image::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  line-height: 70px;
+  color: white;
+  font-size: 20px;
+  text-indent: 40rpx;
+  text-align: center;
+}
+
+.category .weui-flex__item .baijiu::after {
+  content: "白酒"
+}
+
+.category .weui-flex__item .hongjiu::after {
+  content: "红酒"
+}
+
+.category .weui-flex__item .yangjiu::after {
+  content: "洋酒"
+}
+
+.category .pijiu {
+  position: relative;
+  margin-left: 4px;
+  height: 218px;
+}
+
+.category .pijiu::after {
+  content: "啤酒";
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.goods-list {
+  margin-top: 10px;
+}
+
+.goods-list .title {
+  border-bottom: 1px solid red;
+}
+
+.goods-list .title image {
+  float: left;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.goods-list .title .big {
+  font-size: 18px;
+  color: red;
+  margin-right: 2px;
+}
+
+.goods-list .title .small {
+  font-size: 13px;
+  color: #999;
+}
+
+.goods {
+  position: relative;
+  margin-top: 5px;
+  border: 1px solid #f6f6f6;
+  border-radius: 2px;
+  background-color: #F6F6F6;
+}
+
+.goods .pic {
+  width: 100px;
+  height: 100px;
+}
+
+.goods .buy {
+  position: absolute;
+  right: 15px;
+  bottom: 8px;
+  width: 42px;
+  height: 42px;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  line-height: 42px;
+  background-size: 100% 100%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAS1BMVEUAAAD/lRD/lRD/lRD5tyn4vi7/lRD/lRD/lRD4wC//lRD4vy/4vi76syX7rCD8qR74vy/+nhb5vCz5vCz5uCn6tSf9nxf6tSf4wC/w414uAAAAGHRSTlMAMygVjdgvIx71CvDecVdR8T27uo99P3wi37tSAAABJ0lEQVRIx5VW0RKDIAxTCgripm7O9f+/dFK5Q8VZmkeNubaExipDB61q6rpRLXQVA7ArM6GxcEdWdQYFDLnsAxvfPvXLjM6N5qWf8ZHN2S29mHSPO/R6osfteRxbIdrjCV5vBR2HROzB4AXMQPyskofDS7hHqid1+cW/+Bz6BdLGG5A+7Aof3B3dDVR+Ejd4CxPlo7hGBprko/jkObqforzlxUk+Dic4tufpffDzevzBVViA4LeuglQLXw3Q+b9L6G9ygkpD50evqFNfQvfUa73CldBdYArpwmKErQoHKTwmoQmkFiMDzzx9JgOXXo+Rrofs8gmvtmxxyNdSWnofbunJVqp4YedxMGbzTnFwETbLfAybednChokyRCbKuKCUx7A85IW/ED/dzGzu99rKbAAAAABJRU5ErkJggg==");
+}
+
+.goods .info {
+  position: relative;
+  padding: 5px 10px;
+}
+
+.goods .info .name {
+  font-size: 15px;
+}
+
+.goods .info .introduction {
+  font-size: 12px;
+  color: #999;
+}
+
+.goods .info .footer {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+}
+
+.goods .info .price {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.goods .info .sold {
+  font-size: 12px;
+  color: #FDA43B;
+}

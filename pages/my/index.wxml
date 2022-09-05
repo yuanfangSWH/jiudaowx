@@ -1,0 +1,21 @@
+<!--pages/my/index.wxml-->
+<view class="page">
+  <view class="hd weui-flex">
+    <image class="avatar" mode="scaleToFill" src="{{userInfo.avatarUrl || '/images/avatar.png'}}"></image>
+    <view class="info weui-flex__item">
+      <button open-type="getUserInfo" bindgetuserinfo="getuserinfo" wx:if="{{!hasInfo}}">登录/注册</button>
+      <text wx:else>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="bd">
+    <i-cell-group>
+      <i-cell title="我的订单" is-link url="/pages/order/index"></i-cell>
+      <i-cell title="地址管理" is-link url="/pages/address/index"></i-cell>
+    </i-cell-group>
+    <view class="admin" wx:if="{{userInfo.admin}}">
+      <i-cell-group>
+        <i-cell title="订单管理" is-link url="/pages/order/manage"></i-cell>
+      </i-cell-group>
+    </view>
+  </view>
+</view>

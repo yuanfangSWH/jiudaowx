@@ -1,0 +1,52 @@
+<!--pages/goods/list.wxml-->
+<view class="page">
+  <view class="hd">
+    <view class="weui-search-bar no-border">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="onSearch" confirm-type="search"/>
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <!-- <view class="brands">
+      <text style="margin-right: 10px;">品牌：</text>
+      <text class="brand">百威</text>
+      <text class="brand">雪花</text>
+      <text class="brand">青岛</text>
+      <text class="brand">哈尔滨</text>
+    </view> -->
+  </view>
+  <view class="bd">
+    <view class="filter">
+      <view class="item {{filter == '' ? 'active' : ''}}" data-type="" bind:tap="changeFilter">综合销量</view>
+      <view class="item {{filter == 'price' ? 'active' : ''}}" data-type="price" bind:tap="changeFilter">销售价格(高)</view>
+      <view class="item {{filter == 'priceasc' ? 'active' : ''}}" data-type="priceasc" bind:tap="changeFilter">销售价格(低)</view>
+      <view class="item {{filter == 'star' ? 'active' : ''}}" data-type="star" bind:tap="changeFilter">评价最高</view>
+      <!-- <view class="item {{filter == 'activity' ? 'active' : ''}}" data-type="activity" bind:tap="changeFilter">限时优惠</view> -->
+    </view>
+    <view class="goods-list">
+      <view class="goods weui-flex" wx:for="{{goodsList}}" wx:key="{{item.id}}" data-id="{{item.id}}" bind:tap="goDetail">
+        <image mode="aspectFit" class="pic" src="{{item.image || '/images/demo.jpg'}}"></image>
+        <view class="info weui-flex__item">
+          <view class="name">{{item.name}}</view>
+          <view class="introduction">{{item.introduction}}</view>
+          <view class="footer">
+            <text class="price text-red">￥{{item.price}}</text>
+            <text class="sold">已售: {{item.sold}}件</text>
+          </view>
+          <view class="buy">购买</view>
+        </view>
+      </view>
+      <view class="no-more">没有更多了</view>
+    </view>
+  </view>
+</view>
